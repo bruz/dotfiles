@@ -25,3 +25,4 @@
 
 [core]
 	excludesfile = /Users/bruz/.gitignore_global
+	editor = vim
