@@ -50,3 +50,6 @@ alias tetherunload='sudo kextunload /System/Library/Extensions/EasyTetherUSBEthe
 
 # Set the environment variable for the docker daemon
 export DOCKER_HOST=tcp://localhost:2375
+
+# Android
+export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
