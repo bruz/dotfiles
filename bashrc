@@ -1,7 +1,3 @@
-# ruby version manager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin 
-
 # node version manager
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
