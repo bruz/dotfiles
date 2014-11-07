@@ -1,3 +1,6 @@
+# ruby version manager
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # node version manager
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
@@ -51,5 +54,14 @@ alias tetherunload='sudo kextunload /System/Library/Extensions/EasyTetherUSBEthe
 # Set the environment variable for the docker daemon
 export DOCKER_HOST=tcp://localhost:2375
 
+# Handy way to enter docker containers
+docker-enter() {
+  boot2docker ssh '[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter'
+  boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
+}
+
 # Android
 export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
+
+# Ruboto setup
+source ~/.rubotorc
