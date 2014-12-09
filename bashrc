@@ -62,6 +62,3 @@ docker-enter() {
 
 # Android
 export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
-
-# Ruboto setup
-source ~/.rubotorc
