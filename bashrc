@@ -62,3 +62,11 @@ docker-enter() {
 
 # Android
 export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
+
+# Firefox binary
+export PATH=~/Applications/Firefox.app/Contents/MacOS:$PATH
+
+# Redis helper
+redis-del() {
+  redis-cli KEYS "$1*" | xargs redis-cli DEL
+}
