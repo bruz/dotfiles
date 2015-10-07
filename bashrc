@@ -57,7 +57,10 @@ alias tetherload='sudo kextload /System/Library/Extensions/EasyTetherUSBEthernet
 alias tetherunload='sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext'
 
 # Set the environment variable for the docker daemon
-export DOCKER_HOST=tcp://localhost:2375
+#export DOCKER_HOST=tcp://localhost:2375
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/bruz/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 # Handy way to enter docker containers
 docker-enter() {
