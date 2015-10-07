@@ -21,6 +21,11 @@ touchp() {
   touch "$1"
 }
 
+# hack to allow remote servers to set the terminal title
+ssht() {
+  TERM=vt100 ssh "$1"
+}
+
 # colors less
 export LESS='-R'
 
