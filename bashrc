@@ -7,6 +7,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # bash completion for git things
 source ~/.git-scripts/git-completion.bash
 
+# bash completion package
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 function parse_git_branch {
   ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
   echo "("${ref#refs/heads/}")"
