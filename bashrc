@@ -77,3 +77,8 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Firefox binary for selenium
 export PATH=$PATH:$HOME/Applications/Firefox.app/Contents/MacOS
+
+# Redis helper
+redis-del() {
+  redis-cli KEYS "$1*" | xargs redis-cli DEL
+}
