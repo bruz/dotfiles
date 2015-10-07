@@ -68,5 +68,9 @@ docker-enter() {
   boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
 }
 
+# More Docker
+alias dc='docker-compose'
+alias dop='docker-open'
+
 # Android
 export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
