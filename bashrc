@@ -73,4 +73,4 @@ alias dc='docker-compose'
 alias dop='docker-open'
 
 # Android
-export ANDROID_HOME=/Users/bruz/adt-bundle-mac-x86_64-20131030/sdk
+export ANDROID_HOME=/usr/local/opt/android-sdk
