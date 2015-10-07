@@ -74,3 +74,6 @@ alias dop='docker-open'
 
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# Firefox binary for selenium
+export PATH=$PATH:$HOME/Applications/Firefox.app/Contents/MacOS
