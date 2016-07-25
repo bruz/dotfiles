@@ -26,6 +26,12 @@ touchp() {
   touch "$1"
 }
 
+# like touchp, but open with subl afterward
+sublp() {
+  touchp "$1"
+  subl "$1"
+}
+
 # hack to allow remote servers to set the terminal title
 ssht() {
   TERM=vt100 ssh "$1"
@@ -66,3 +72,13 @@ export PATH=$PATH:$HOME/Applications/Firefox.app/Contents/MacOS
 redis-del() {
   redis-cli KEYS "$1*" | xargs redis-cli DEL
 }
+
+# Go via Homebrew
+export GOPATH=$HOME/code/gostuff
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+
+# Hanami
+alias han='hanami'
+
+# Mercurial
+alias hgcop='hg status -n | xargs rubocop-select | xargs rubocop'
