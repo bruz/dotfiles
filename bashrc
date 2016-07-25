@@ -46,32 +46,11 @@ export PATH=$PATH:${HOME}/bin
 # Heroku toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Ansible
-export PATH=$HOME/code/ansible/bin:$HOME/code/ansible-repo/scripts:/usr/local/bin:/usr/local/share/python:$PATH
-export PYTHONPATH=$HOME/code/ansible/lib:
-alias ash='a-ssh'
-
 # make Sublime the default editor
 export EDITOR='subl -w'
 
 # scala wants more memory
 export SBT_OPTS=-XX:MaxPermSize=256m
-
-# load/unload easytether module - having it loaded prevents adb from working
-alias tetherload='sudo kextload /System/Library/Extensions/EasyTetherUSBEthernet.kext'
-alias tetherunload='sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext'
-
-# Set the environment variable for the docker daemon
-#export DOCKER_HOST=tcp://localhost:2375
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/bruz/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
-# Handy way to enter docker containers
-docker-enter() {
-  boot2docker ssh '[ -f /var/lib/boot2docker/nsenter ] || docker run --rm -v /var/lib/boot2docker/:/target jpetazzo/nsenter'
-  boot2docker ssh -t sudo /var/lib/boot2docker/docker-enter "$@"
-}
 
 # More Docker
 alias dc='docker-compose'
