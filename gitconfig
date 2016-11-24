@@ -4,15 +4,19 @@
 	user = Bruz
 
 [alias]
-  co = checkout
-  ci = commit
-  st = status
-  cp = cherry-pick
-  sl = stash list
-  ss = stash save
-  sp = "!sh -c 'git stash pop stash@{$1}' -"
-  sd = "!sh -c 'git stash drop stash@{$1}' -"
-  sv = "!sh -c 'git stash show stash@{$1}' -"
+	co = checkout
+	ci = commit
+	st = status
+	cp = cherry-pick
+	sl = stash list
+	ss = stash save
+	sp = "!sh -c 'git stash pop stash@{$1}' -"
+	sd = "!sh -c 'git stash drop stash@{$1}' -"
+	sv = "!sh -c 'git stash show stash@{$1}' -"
+
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
 
 [color]
 	ui = auto
