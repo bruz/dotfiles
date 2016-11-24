@@ -74,7 +74,7 @@ redis-del() {
 }
 
 # Go via Homebrew
-export GOPATH=$HOME/code/gostuff
+export GOPATH=$HOME/code/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
 
 # Hanami
