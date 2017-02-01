@@ -19,7 +19,7 @@ function parse_git_branch {
 }
 
 # show ruby version and git branch in prompt
-PS1="\$(~/.rvm/bin/rvm-prompt)\$(__git_ps1) \W$ "
+PS1="\$(__git_ps1) \W$ "
 
 # like mkdir -p, for touch
 touchp() {
