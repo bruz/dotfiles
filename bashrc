@@ -7,8 +7,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # bash completion for git things
 source ~/.git-scripts/git-completion.bash
 
+brew_available=$(command -v brew >/dev/null 2>&1)
 # bash completion package
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
+if [[ "$brew_available" && -f $(brew --prefix)/etc/bash_completion ]]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
