@@ -4,6 +4,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # node version manager
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
 
+# rbenv
+[[ -s $HOME/.rbenv/bin/rbenv ]] && eval "$(rbenv init -)"
+
 # bash completion for git things
 source ~/.git-scripts/git-completion.bash
 
