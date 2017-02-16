@@ -36,6 +36,12 @@ sublp() {
   subl "$1"
 }
 
+# like sublp, but with cloud9
+c9p() {
+  touchp "$1"
+  c9 "$1"
+}
+
 # hack to allow remote servers to set the terminal title
 ssht() {
   TERM=vt100 ssh "$1"
