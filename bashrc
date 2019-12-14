@@ -1,14 +1,19 @@
-# ruby version manager
-export PATH="$PATH:$HOME/.rvm/bin"
+# rbenv
+eval "$(rbenv init -)"
 
 # node version manager
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 
 # rbenv
 [[ -s $HOME/.rbenv/bin/rbenv ]] && eval "$(rbenv init -)"
 
 # bash completion for git things
 source ~/.git-scripts/git-completion.bash
+
+# remove local branches that have been deleted remotely
+alias gbpurge='git branch --merged | grep -Ev "(\*|master|develop)" | xargs -n 1 git branch -d'
 
 brew_available=$(command -v brew >/dev/null 2>&1)
 # bash completion package
@@ -92,3 +97,10 @@ alias han='hanami'
 
 # Mercurial
 alias hgcop='hg status -n | xargs rubocop-select | xargs rubocop'
+
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+# Starship command prompt
+eval "$(starship init bash)"
