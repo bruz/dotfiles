@@ -6,10 +6,12 @@
 [alias]
 	co = checkout
 	ci = commit
+	cia = commit --amend --reset-author
 	st = status
 	cp = cherry-pick
 	sl = stash list
 	ss = stash save
+	br = branch
 	sp = "!sh -c 'git stash pop stash@{$1}' -"
 	sd = "!sh -c 'git stash drop stash@{$1}' -"
 	sv = "!sh -c 'git stash show stash@{$1}' -"
